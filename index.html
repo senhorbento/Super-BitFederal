@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super BitFederal</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="menu">
+        <h1>Super BitFederal</h1>
+        <button id="startBtn">Jogar</button>
+    </div>
+
+    <div id="gameUI">
+        <p>Satoshis: <span id="score">0</span> Seed: <span id="seedDisplay">0</span> Level Size: <span
+                id="levelSize">0</span></p>
+        <div id="game-container">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+    </div>
+    <div id="winText">
+        <div>Você venceu!</div>
+        <button id="restartBtn">Reiniciar</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
