@@ -2,11 +2,14 @@ body {
   margin: 0;
   font-family: sans-serif;
   background: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
   background-color: rgb(184 151 215);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #menu {
@@ -14,26 +17,28 @@ body {
 }
 
 #gameUI {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
 #game-container {
-  position: relative;
-  width: 800px;
-  height: 600px;
-  margin: auto;
-  background-image: url('img/background_favela.png');
-  background-size: cover;
-  background-position: center;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 #gameCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
 }
 
 #winText {
