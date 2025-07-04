@@ -1,4 +1,5 @@
 import { startGameWithSeed, updateViewportSize } from './engine.js';
+import { bgMusic } from './audio.js';
 
 const { Engine, Render, World, Bodies, Mouse, MouseConstraint, Events, Query } = Matter;
 
@@ -103,6 +104,7 @@ function stopMenu() {
 function handleButtonClick(label) {
     switch (label) {
         case 'Escolhida pelo Dev':
+            try { bgMusic.play(); } catch (e) { }
             stopMenu();
             Render.stop(render);
             World.clear(world, false);
@@ -110,6 +112,7 @@ function handleButtonClick(label) {
             startGameWithSeed(seed, Matter);
             break;
         case 'Fase Aleatória':
+            try { bgMusic.play(); } catch (e) { }
             stopMenu();
             Render.stop(render);
             World.clear(world, false);
